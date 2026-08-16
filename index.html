@@ -123,6 +123,20 @@
     margin-top:1.3mm;
     line-height:1.35;
   }
+  .kpi-combo .kpi-divider{
+    height:1px;background:var(--line);margin:1.8mm 0;
+  }
+  .kpi-combo .kpi-substat{
+    font-size:10px;
+    font-weight:600;
+    color:var(--pine-dim);
+  }
+  .kpi-combo .kpi-substat .num{
+    font-family:"Heebo",sans-serif;
+    font-weight:800;
+    font-size:13px;
+    color:var(--pine);
+  }
 
   /* ---------- channel mix bar ---------- */
   .mix{
@@ -225,7 +239,7 @@
     display:flex;
     justify-content:space-between;
     gap:2mm;
-    padding:1.1mm 0;
+    padding:0.85mm 0;
     border-bottom:1px dashed #E3DECB;
   }
   .priority-list li:last-child{border-bottom:none;}
@@ -304,13 +318,11 @@
       <div class="val num">49&nbsp;(44%)</div>
       <div class="sub">שירותים ללא ערוץ מקוון — פוטנציאל דיגיטציה</div>
     </div>
-    <div class="kpi pos">
-      <div class="val num">69%</div>
-      <div class="sub">מהשימושים בפועל מתבצעים כיום דיגיטלית</div>
-    </div>
-    <div class="kpi">
+    <div class="kpi kpi-combo">
       <div class="val num">163,327</div>
       <div class="sub">שימושים מתועדים בשנה החולפת, בכל הערוצים</div>
+      <div class="kpi-divider"></div>
+      <div class="kpi-substat"><span class="num">69%</span>&nbsp;מתוכם מתבצעים דיגיטלית</div>
     </div>
   </div>
 
@@ -332,8 +344,7 @@
   </div>
 
   <div class="callout">
-    <b>תובנה מרכזית:</b> שלוש יחידות — רווחה ושירותים חברתיים, רישוי וקידום עסקים, ושירות פסיכולוגי חינוכי — מספקות יחד <span class="num">29</span> שירותים
-    (<span class="num">26%</span> מהקטלוג), אך אחראיות יחד לפחות מ־<span class="num">0.1%</span> מהשימוש הדיגיטלי הכולל (<span class="num">105</span> מתוך <span class="num">112,112</span> שימושים דיגיטליים). זהו פער כפול: זמינות נמוכה של ערוץ מקוון, ואימוץ כמעט אפסי גם כשהערוץ קיים.
+    <b>תובנה מרכזית:</b> ברווחה, ברישוי עסקים ובשירות הפסיכולוגי־חינוכי קיים פער משמעותי בדיגיטציה: מעט מהשירותים זמינים באופן מקוון, וגם באלה שכן — השימוש נמוך מאוד. שלוש היחידות מספקות יחד <span class="num">29</span> שירותים (<span class="num">26%</span>), אך נרשמו בהן רק <span class="num">105</span> שימושים דיגיטליים בשנה האחרונה.
   </div>
 
   <div class="body-grid">
@@ -433,8 +444,8 @@
     </div>
 
     <div class="right-col">
-      <div class="panel" style="flex:0 0 auto;">
-        <h2>תעדוף מיידי — שירותים ללא מקוון, לפי היקף שימוש</h2>
+      <div class="panel" style="flex:1;">
+        <h2>תעדוף מיידי — 10 שירותים ללא ערוץ מקוון, לפי היקף שימוש</h2>
         <ul class="priority-list">
           <li>
             <div class="priority-item-row">
@@ -464,16 +475,48 @@
             </div>
             <span class="usage num">300</span>
           </li>
-        </ul>
-      </div>
-
-      <div class="panel" style="flex:1;">
-        <h2>המלצות לפעולה</h2>
-        <ul class="rec-list">
-          <li><span class="rec-num">1</span><span>תעדוף לפי היקף שימוש בפועל: "קשר עם השירות הפסיכולוגי חינוכי" ו"הצטרפות לספרייה" — ראשונים לדיגיטציה מהירה.</span></li>
-          <li><span class="rec-num">2</span><span>במוקד קיים כבר ערוץ מקוון, אך רק 26% מ־40,585 השימושים מנוצל דיגיטלית — נדרש קידום ושימושיות, לא פיתוח נוסף.</span></li>
-          <li><span class="rec-num">3</span><span>רווחה, רישוי עסקים ושירות פסיכ' חינוכי: פער כפול (זמינות ואימוץ) — מומלץ פיילוט מתווך־דיגיטלי בזהירות.</span></li>
-          <li><span class="rec-num">4</span><span>לעדכן דוח זה כמדד מעקב רבעוני, לבחינת אפקטיביות הצעדים.</span></li>
+          <li>
+            <div class="priority-item-row">
+              <span class="rank">5</span>
+              <span class="name">פנייה ישירה בנושא היטל השבחה<span class="dept">הנדסה</span></span>
+            </div>
+            <span class="usage num">300</span>
+          </li>
+          <li>
+            <div class="priority-item-row">
+              <span class="rank">6</span>
+              <span class="name">פנייה לעובד סוציאלי<span class="dept">רווחה ושירותים חברתיים</span></span>
+            </div>
+            <span class="usage num">250</span>
+          </li>
+          <li>
+            <div class="priority-item-row">
+              <span class="rank">7</span>
+              <span class="name">בקשה ללימודי חוץ<span class="dept">חינוך</span></span>
+            </div>
+            <span class="usage num">190</span>
+          </li>
+          <li>
+            <div class="priority-item-row">
+              <span class="rank">8</span>
+              <span class="name">בקשה לסיוע כספי<span class="dept">רווחה ושירותים חברתיים</span></span>
+            </div>
+            <span class="usage num">150</span>
+          </li>
+          <li>
+            <div class="priority-item-row">
+              <span class="rank">9</span>
+              <span class="name">סיוע חומרי/כלכלי<span class="dept">רווחה ושירותים חברתיים</span></span>
+            </div>
+            <span class="usage num">150</span>
+          </li>
+          <li>
+            <div class="priority-item-row">
+              <span class="rank">10</span>
+              <span class="name">שירות שניתן מתוקף חוק<span class="dept">רווחה ושירותים חברתיים</span></span>
+            </div>
+            <span class="usage num">130</span>
+          </li>
         </ul>
       </div>
     </div>
