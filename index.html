@@ -92,14 +92,17 @@
     margin-bottom:4mm;
   }
   .kpi{
-    flex:1;
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:3px;
-    padding:3mm 3mm;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
+  flex:1;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:3mm 3mm;
+  text-align:center;
+  display:flex;            
+  flex-direction:column;     
+  justify-content:center;   
+  position:relative;
+  overflow:hidden;
   }
   .kpi::before{
     content:"";
@@ -245,7 +248,7 @@
     display:flex;
     justify-content:space-between;
     gap:2mm;
-    padding:1.7mm 0;
+    padding:1mm 0;
     border-bottom:1px dashed #E3DECB;
   }
   .priority-list li:last-child{border-bottom:none;}
@@ -340,7 +343,7 @@
     <div class="mix-bar">
       <div class="mix-seg g" style="width:70%;background:var(--sage);">דיגיטלי — <span class="num">70%</span></div>
       <div class="mix-seg o" style="width:25%;background:var(--gold);">טלפוני — <span class="num">25%</span></div>
-      <div class="mix-seg r" style="width:5%;background:var(--brick);"><span class="num">5%</span>></div>
+      <div class="mix-seg r" style="width:5%;background:var(--brick);"<span class="num">5%</span>></div>
     </div>
     <div class="mix-legend">
       <span><span class="dot" style="background:var(--sage);"></span>דיגיטלי — <span class="num">112,112</span></span>
