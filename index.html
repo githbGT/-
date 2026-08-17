@@ -1,3 +1,6 @@
+
+
+סיכום מנכל מיפוי שירותים ודיגיטציה · HTML
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -16,6 +19,7 @@
     --pine-dim:#3E6357;
     --sage:#7E9E80;
     --sage-bg:#E8EEE3;
+    --tier-good:#2F6B47;
     --gold:#B4832E;
     --gold-bg:#F5E8CE;
     --brick:#A6462E;
@@ -43,7 +47,7 @@
     overflow:hidden;
   }
   .num{direction:ltr;unicode-bidi:isolate;}
-
+ 
   /* ---------- header ---------- */
   header{
     display:flex;
@@ -83,7 +87,7 @@
     white-space:nowrap;
   }
   .meta-box b{color:var(--ink);}
-
+ 
   /* ---------- KPI row ---------- */
   .kpi-row{
     display:flex;
@@ -118,26 +122,26 @@
     unicode-bidi:isolate;
   }
   .kpi .sub{
-    font-size:9.3px;
+    font-size:10.8px;
     color:var(--muted);
     margin-top:1.3mm;
-    line-height:1.35;
+    line-height:1.4;
   }
   .kpi-combo .kpi-divider{
     height:1px;background:var(--line);margin:1.8mm 0;
   }
   .kpi-combo .kpi-substat{
-    font-size:10px;
+    font-size:11.5px;
     font-weight:600;
     color:var(--pine-dim);
   }
   .kpi-combo .kpi-substat .num{
     font-family:"Heebo",sans-serif;
     font-weight:800;
-    font-size:13px;
+    font-size:15px;
     color:var(--pine);
   }
-
+ 
   /* ---------- channel mix bar ---------- */
   .mix{
     background:var(--card);
@@ -159,20 +163,20 @@
   .mix-seg{display:flex;align-items:center;justify-content:center;color:#fff;font-family:"Heebo",sans-serif;font-weight:700;font-size:9px;white-space:nowrap;}
   .mix-legend{display:flex;gap:6mm;margin-top:1.4mm;font-size:8px;color:var(--muted);}
   .mix-legend .dot{display:inline-block;width:2.2mm;height:2.2mm;border-radius:50%;margin-inline-end:1.3mm;}
-
+ 
   /* ---------- callout ---------- */
   .callout{
     background:var(--brick-bg);
     border-right:4px solid var(--brick);
     border-radius:2px;
     padding:3mm 4mm;
-    font-size:10.3px;
+    font-size:11.8px;
     line-height:1.6;
     margin-bottom:4mm;
     color:var(--ink);
   }
   .callout b{color:var(--brick);}
-
+ 
   /* ---------- body ---------- */
   .body-grid{
     display:grid;
@@ -201,7 +205,7 @@
     padding-bottom:1.1mm;
     border-bottom:1px solid var(--line);
   }
-
+ 
   .dept-tables{display:flex;gap:4mm;flex:1;min-height:0;}
   .dept-tables > div{flex:1;min-width:0;}
   .dept-tables > div:first-child{border-left:1px solid var(--line);padding-left:4mm;}
@@ -211,10 +215,11 @@
     text-align:start;
     font-weight:700;
     color:var(--muted);
-    font-size:8.4px;
+    font-size:8.2px;
     text-transform:none;
-    padding:1.8mm 1.5mm;
+    padding:1.2mm 1.5mm;
     border-bottom:1.5px solid var(--pine);
+    line-height:1.25;
   }
   tbody td{
     padding:1.5mm 1.5mm;
@@ -224,22 +229,26 @@
   tbody tr:last-child td{border-bottom:none;}
   td.unit{font-weight:600;max-width:26mm;}
   td.num-col{direction:ltr;unicode-bidi:isolate;text-align:start;color:var(--muted);}
-  .bar-wrap{display:flex;align-items:center;gap:2mm;}
-  .bar-track{flex:1;height:4px;background:#EAE6D8;border-radius:2px;overflow:hidden;}
-  .bar-fill{height:100%;border-radius:2px;}
-  .bar-label{font-size:8.2px;direction:ltr;unicode-bidi:isolate;width:9.5mm;flex-shrink:0;color:var(--ink);font-weight:600;}
-  .g{background:var(--sage);}
-  .o{background:var(--gold);}
-  .r{background:var(--brick);}
-
+  td.num-col.ctr{text-align:center;}
+  td.pct{
+    text-align:center;
+    direction:ltr;unicode-bidi:isolate;
+    font-weight:800;
+    font-family:"Heebo",sans-serif;
+    font-size:10.2px;
+  }
+  td.pct.g{color:var(--tier-good);}
+  td.pct.o{color:var(--gold);}
+  td.pct.r{color:var(--brick);}
+ 
   /* right column stacked panels */
   .right-col{display:flex;flex-direction:column;gap:3mm;min-height:0;overflow:hidden;}
-  .priority-list{list-style:none;margin:0;padding:0;font-size:9.6px;}
+  .priority-list{list-style:none;margin:0;padding:0;font-size:10.3px;}
   .priority-list li{
     display:flex;
     justify-content:space-between;
     gap:2mm;
-    padding:0.85mm 0;
+    padding:1.7mm 0;
     border-bottom:1px dashed #E3DECB;
   }
   .priority-list li:last-child{border-bottom:none;}
@@ -255,12 +264,12 @@
     flex-shrink:0;
   }
   .priority-list .name{flex:1;}
-  .priority-list .dept{color:var(--muted);font-size:8.2px;display:block;margin-top:0.5mm;}
+  .priority-list .dept{color:var(--muted);font-size:8.8px;display:block;margin-top:0.5mm;}
   .priority-list .usage{
     font-weight:700;color:var(--brick);white-space:nowrap;direction:ltr;unicode-bidi:isolate;font-size:10px;
   }
   .priority-item-row{display:flex;align-items:flex-start;gap:2mm;width:100%;}
-
+ 
   .rec-list{list-style:none;margin:0;padding:0;font-size:9.4px;line-height:1.36;}
   .rec-list li{
     display:flex;gap:2.5mm;
@@ -272,7 +281,7 @@
     font-family:"Heebo",sans-serif;font-weight:800;color:var(--pine);font-size:11.5px;
     flex-shrink:0;direction:ltr;unicode-bidi:isolate;
   }
-
+ 
   footer{
     margin-top:3mm;
     padding-top:2mm;
@@ -282,7 +291,7 @@
     font-size:7.8px;
     color:var(--muted);
   }
-
+ 
   @media print{
     body{background:none;padding:0;}
     .page{box-shadow:none;margin:0;}
@@ -292,19 +301,19 @@
 </head>
 <body>
 <div class="page">
-
+ 
   <header>
     <div>
-      <div class="eyebrow">עיריית גני תקווה &nbsp;·&nbsp; יחידת BI &nbsp;·&nbsp; סיכום מנכ"ל</div>
+      <div class="eyebrow">עיריית גני תקווה &nbsp;·&nbsp; יחידת BI ושירות &nbsp;·&nbsp; סיכום מנכ"ל</div>
       <h1>מיפוי שירותי הרשות לתושב — תמונת מצב דיגיטציה ותעדוף המשך</h1>
-      <div class="subtitle">מבוסס על קטלוג של <span class="num">112</span> שירותי רשות, מיפוי ערוצי שירות (טלפון / פרונטלי / מייל / מקוון) והיקפי שימוש בפועל בשנה החולפת</div>
+      <div class="subtitle">מבוסס על קטלוג מיפוי שירתים שירותים של מערך הדיגיטל</div>
     </div>
     <div class="meta-box">
       תאריך הפקה: <b class="num">06/08/2026</b><br>
       מקור: גיליון "מאוחד", קטלוג שירותי הרשות
     </div>
   </header>
-
+ 
   <div class="kpi-row">
     <div class="kpi">
       <div class="val num">112</div>
@@ -325,127 +334,76 @@
       <div class="kpi-substat"><span class="num">69%</span>&nbsp;מתוכם מתבצעים דיגיטלית</div>
     </div>
   </div>
-
+ 
   <div class="mix">
     <div class="mix-head">
       <h2>התפלגות שימוש בין ערוצי שירות (כלל הרשות, שנה חולפת)</h2>
       <span>מתוך <span class="num">160,713</span> שימושים המסווגים לפי ערוץ</span>
     </div>
     <div class="mix-bar">
-      <div class="mix-seg g" style="width:69.7%;background:var(--sage);">דיגיטלי — <span class="num">69.7%</span></div>
-      <div class="mix-seg o" style="width:24.9%;background:var(--gold);">טלפוני — <span class="num">24.9%</span></div>
-      <div class="mix-seg r" style="width:5.4%;background:var(--brick);"></div>
+      <div class="mix-seg g" style="width:70%;background:var(--sage);">דיגיטלי — <span class="num">70%</span></div>
+      <div class="mix-seg o" style="width:25%;background:var(--gold);">טלפוני — <span class="num">25%</span></div>
+      <div class="mix-seg r" style="width:5%;background:var(--brick);"></div>
     </div>
     <div class="mix-legend">
       <span><span class="dot" style="background:var(--sage);"></span>דיגיטלי — <span class="num">112,112</span></span>
       <span><span class="dot" style="background:var(--gold);"></span>טלפוני — <span class="num">39,964</span></span>
-      <span><span class="dot" style="background:var(--brick);"></span>פרונטלי (סניפים/עמדות) — <span class="num">8,637</span> (<span class="num">5.4%</span>)</span>
+      <span><span class="dot" style="background:var(--brick);"></span>פרונטלי (סניפים/עמדות) — <span class="num">8,637</span> (<span class="num">5%</span>)</span>
     </div>
   </div>
-
+ 
   <div class="callout">
     <b>תובנה מרכזית:</b> ברווחה, ברישוי עסקים ובשירות הפסיכולוגי־חינוכי קיים פער משמעותי בדיגיטציה: מעט מהשירותים זמינים באופן מקוון, וגם באלה שכן — השימוש נמוך מאוד. שלוש היחידות מספקות יחד <span class="num">29</span> שירותים (<span class="num">26%</span>), אך נרשמו בהן רק <span class="num">105</span> שימושים דיגיטליים בשנה האחרונה.
   </div>
-
+ 
   <div class="body-grid">
-
+ 
     <div class="panel">
       <h2>פערי דיגיטציה לפי יחידה מספקת שירות &nbsp;(ממוינות לפי היקף שימוש שנתי, גבוה לנמוך)</h2>
       <div class="dept-tables">
         <div>
         <table>
-          <colgroup><col style="width:36%"><col style="width:9%"><col style="width:22%"><col style="width:22%"><col style="width:11%"></colgroup>
+          <colgroup><col style="width:32%"><col style="width:16%"><col style="width:17%"><col style="width:17%"><col style="width:18%"></colgroup>
           <thead>
-            <tr><th class="unit-h">יחידה</th><th style="text-align:center">שיר'</th><th>מקוון</th><th>דיגיטלי</th><th style="text-align:start">שימוש</th></tr>
+            <tr><th class="unit-h">יחידה</th><th style="text-align:center">מספר<br>שירותים</th><th style="text-align:center">ערוץ<br>מקוון</th><th style="text-align:center">שימוש<br>דיגיטלי</th><th style="text-align:start">שימוש<br>שנתי</th></tr>
           </thead>
           <tbody>
-            <tr><td class="unit" title="הכנסות וארנונה">הכנסות וארנונה</td><td style="text-align:center" class="num-col">14</td>
-              <td><div class="bar-wrap"><span class="bar-label">93%</span><div class="bar-track"><div class="bar-fill g" style="width:93%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">88%</span><div class="bar-track"><div class="bar-fill g" style="width:88%"></div></div></div></td>
-              <td class="num-col">51,515</td></tr>
-            <tr><td class="unit" title="מוקד עירוני">מוקד עירוני</td><td style="text-align:center" class="num-col">1</td>
-              <td><div class="bar-wrap"><span class="bar-label">100%</span><div class="bar-track"><div class="bar-fill g" style="width:100%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">26%</span><div class="bar-track"><div class="bar-fill r" style="width:26%"></div></div></div></td>
-              <td class="num-col">40,585</td></tr>
-            <tr><td class="unit" title="תרבות ופנאי">תרבות ופנאי</td><td style="text-align:center" class="num-col">6</td>
-              <td><div class="bar-wrap"><span class="bar-label">67%</span><div class="bar-track"><div class="bar-fill o" style="width:67%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">86%</span><div class="bar-track"><div class="bar-fill g" style="width:86%"></div></div></div></td>
-              <td class="num-col">30,767</td></tr>
-            <tr><td class="unit" title="תאגיד מים">תאגיד מים</td><td style="text-align:center" class="num-col">1</td>
-              <td><div class="bar-wrap"><span class="bar-label">100%</span><div class="bar-track"><div class="bar-fill g" style="width:100%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">84%</span><div class="bar-track"><div class="bar-fill g" style="width:84%"></div></div></div></td>
-              <td class="num-col">16,032</td></tr>
-            <tr><td class="unit" title='שפ"ע'>שפ"ע</td><td style="text-align:center" class="num-col">5</td>
-              <td><div class="bar-wrap"><span class="bar-label">100%</span><div class="bar-track"><div class="bar-fill g" style="width:100%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">89%</span><div class="bar-track"><div class="bar-fill g" style="width:89%"></div></div></div></td>
-              <td class="num-col">4,600</td></tr>
-            <tr><td class="unit" title="חינוך">חינוך</td><td style="text-align:center" class="num-col">20</td>
-              <td><div class="bar-wrap"><span class="bar-label">40%</span><div class="bar-track"><div class="bar-fill o" style="width:40%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">72%</span><div class="bar-track"><div class="bar-fill g" style="width:72%"></div></div></div></td>
-              <td class="num-col">4,362</td></tr>
-            <tr><td class="unit" title="ביטחון">ביטחון</td><td style="text-align:center" class="num-col">1</td>
-              <td><div class="bar-wrap"><span class="bar-label">100%</span><div class="bar-track"><div class="bar-fill g" style="width:100%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">98%</span><div class="bar-track"><div class="bar-fill g" style="width:98%"></div></div></div></td>
-              <td class="num-col">4,041</td></tr>
-            <tr><td class="unit" title="השירות הוטרינרי">השירות הוטרינרי</td><td style="text-align:center" class="num-col">10</td>
-              <td><div class="bar-wrap"><span class="bar-label">100%</span><div class="bar-track"><div class="bar-fill g" style="width:100%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">47%</span><div class="bar-track"><div class="bar-fill o" style="width:47%"></div></div></div></td>
-              <td class="num-col">2,781</td></tr>
-            <tr><td class="unit" title="הנדסה">הנדסה</td><td style="text-align:center" class="num-col">5</td>
-              <td><div class="bar-wrap"><span class="bar-label">80%</span><div class="bar-track"><div class="bar-fill g" style="width:80%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">90%</span><div class="bar-track"><div class="bar-fill g" style="width:90%"></div></div></div></td>
-              <td class="num-col">2,012</td></tr>
+            <tr><td class="unit" title="הכנסות וארנונה">הכנסות וארנונה</td><td class="num-col ctr">14</td><td class="pct g">93%</td><td class="pct g">88%</td><td class="num-col">51,515</td></tr>
+            <tr><td class="unit" title="מוקד עירוני">מוקד עירוני</td><td class="num-col ctr">1</td><td class="pct g">100%</td><td class="pct r">26%</td><td class="num-col">40,585</td></tr>
+            <tr><td class="unit" title="תרבות ופנאי">תרבות ופנאי</td><td class="num-col ctr">6</td><td class="pct o">67%</td><td class="pct g">86%</td><td class="num-col">30,767</td></tr>
+            <tr><td class="unit" title="תאגיד מים">תאגיד מים</td><td class="num-col ctr">1</td><td class="pct g">100%</td><td class="pct g">84%</td><td class="num-col">16,032</td></tr>
+            <tr><td class="unit" title='שפ"ע'>שפ"ע</td><td class="num-col ctr">5</td><td class="pct g">100%</td><td class="pct g">89%</td><td class="num-col">4,600</td></tr>
+            <tr><td class="unit" title="חינוך">חינוך</td><td class="num-col ctr">20</td><td class="pct o">40%</td><td class="pct g">72%</td><td class="num-col">4,362</td></tr>
+            <tr><td class="unit" title="ביטחון">ביטחון</td><td class="num-col ctr">1</td><td class="pct g">100%</td><td class="pct g">98%</td><td class="num-col">4,041</td></tr>
+            <tr><td class="unit" title="השירות הוטרינרי">השירות הוטרינרי</td><td class="num-col ctr">10</td><td class="pct g">100%</td><td class="pct o">47%</td><td class="num-col">2,781</td></tr>
+            <tr><td class="unit" title="הנדסה">הנדסה</td><td class="num-col ctr">5</td><td class="pct g">80%</td><td class="pct g">90%</td><td class="num-col">2,012</td></tr>
           </tbody>
         </table>
         </div>
         <div>
         <table>
-          <colgroup><col style="width:36%"><col style="width:9%"><col style="width:22%"><col style="width:22%"><col style="width:11%"></colgroup>
+          <colgroup><col style="width:32%"><col style="width:16%"><col style="width:17%"><col style="width:17%"><col style="width:18%"></colgroup>
           <thead>
-            <tr><th class="unit-h">יחידה</th><th style="text-align:center">שיר'</th><th>מקוון</th><th>דיגיטלי</th><th style="text-align:start">שימוש</th></tr>
+            <tr><th class="unit-h">יחידה</th><th style="text-align:center">מספר<br>שירותים</th><th style="text-align:center">ערוץ<br>מקוון</th><th style="text-align:center">שימוש<br>דיגיטלי</th><th style="text-align:start">שימוש<br>שנתי</th></tr>
           </thead>
           <tbody>
-            <tr><td class="unit" title="החברה לפיתוח גני תקווה">החברה לפיתוח גנ"ת</td><td style="text-align:center" class="num-col">1</td>
-              <td><div class="bar-wrap"><span class="bar-label">100%</span><div class="bar-track"><div class="bar-fill g" style="width:100%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">85%</span><div class="bar-track"><div class="bar-fill g" style="width:85%"></div></div></div></td>
-              <td class="num-col">2,000</td></tr>
-            <tr><td class="unit" title="רישוי וקידום עסקים">רישוי וקידום עסקים</td><td style="text-align:center" class="num-col">10</td>
-              <td><div class="bar-wrap"><span class="bar-label">20%</span><div class="bar-track"><div class="bar-fill r" style="width:20%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">0.3%</span><div class="bar-track"><div class="bar-fill r" style="width:3%"></div></div></div></td>
-              <td class="num-col">1,577</td></tr>
-            <tr><td class="unit" title="רווחה ושירותים חברתיים">רווחה ושיר' חברתיים</td><td style="text-align:center" class="num-col">13</td>
-              <td><div class="bar-wrap"><span class="bar-label">8%</span><div class="bar-track"><div class="bar-fill r" style="width:8%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">0%</span><div class="bar-track"><div class="bar-fill r" style="width:2%"></div></div></div></td>
-              <td class="num-col">1,248</td></tr>
-            <tr><td class="unit" title="שירות פסיכולוגי חינוכי">שירות פסיכ' חינוכי</td><td style="text-align:center" class="num-col">6</td>
-              <td><div class="bar-wrap"><span class="bar-label">17%</span><div class="bar-track"><div class="bar-fill r" style="width:17%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">9%</span><div class="bar-track"><div class="bar-fill r" style="width:9%"></div></div></div></td>
-              <td class="num-col">1,068</td></tr>
-            <tr><td class="unit" title="ועדת תכנון ובנייה">ועדת תכנון ובנייה</td><td style="text-align:center" class="num-col">11</td>
-              <td><div class="bar-wrap"><span class="bar-label">64%</span><div class="bar-track"><div class="bar-fill o" style="width:64%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">65%</span><div class="bar-track"><div class="bar-fill o" style="width:65%"></div></div></div></td>
-              <td class="num-col">547</td></tr>
-            <tr><td class="unit" title="תחבורה וחניה">תחבורה וחניה</td><td style="text-align:center" class="num-col">5</td>
-              <td><div class="bar-wrap"><span class="bar-label">40%</span><div class="bar-track"><div class="bar-fill o" style="width:40%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">64%</span><div class="bar-track"><div class="bar-fill o" style="width:64%"></div></div></div></td>
-              <td class="num-col">156</td></tr>
-            <tr><td class="unit" title="מחלקה משפטית">מחלקה משפטית</td><td style="text-align:center" class="num-col">2</td>
-              <td><div class="bar-wrap"><span class="bar-label">50%</span><div class="bar-track"><div class="bar-fill o" style="width:50%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">0%</span><div class="bar-track"><div class="bar-fill r" style="width:2%"></div></div></div></td>
-              <td class="num-col">30</td></tr>
-            <tr><td class="unit" title="נכסים">נכסים</td><td style="text-align:center" class="num-col">1</td>
-              <td><div class="bar-wrap"><span class="bar-label">0%</span><div class="bar-track"><div class="bar-fill r" style="width:2%"></div></div></div></td>
-              <td><div class="bar-wrap"><span class="bar-label">0%</span><div class="bar-track"><div class="bar-fill r" style="width:2%"></div></div></div></td>
-              <td class="num-col">6</td></tr>
+            <tr><td class="unit" title="החברה לפיתוח גני תקווה">החברה לפיתוח גנ"ת</td><td class="num-col ctr">1</td><td class="pct g">100%</td><td class="pct g">85%</td><td class="num-col">2,000</td></tr>
+            <tr><td class="unit" title="רישוי וקידום עסקים">רישוי וקידום עסקים</td><td class="num-col ctr">10</td><td class="pct r">20%</td><td class="pct r">0.3%</td><td class="num-col">1,577</td></tr>
+            <tr><td class="unit" title="רווחה ושירותים חברתיים">רווחה ושיר' חברתיים</td><td class="num-col ctr">13</td><td class="pct r">8%</td><td class="pct r">0%</td><td class="num-col">1,248</td></tr>
+            <tr><td class="unit" title="שירות פסיכולוגי חינוכי">שירות פסיכ' חינוכי</td><td class="num-col ctr">6</td><td class="pct r">17%</td><td class="pct r">9%</td><td class="num-col">1,068</td></tr>
+            <tr><td class="unit" title="ועדת תכנון ובנייה">ועדת תכנון ובנייה</td><td class="num-col ctr">11</td><td class="pct o">64%</td><td class="pct o">65%</td><td class="num-col">547</td></tr>
+            <tr><td class="unit" title="תחבורה וחניה">תחבורה וחניה</td><td class="num-col ctr">5</td><td class="pct o">40%</td><td class="pct o">64%</td><td class="num-col">156</td></tr>
+            <tr><td class="unit" title="מחלקה משפטית">מחלקה משפטית</td><td class="num-col ctr">2</td><td class="pct o">50%</td><td class="pct r">0%</td><td class="num-col">30</td></tr>
+            <tr><td class="unit" title="נכסים">נכסים</td><td class="num-col ctr">1</td><td class="pct r">0%</td><td class="pct r">0%</td><td class="num-col">6</td></tr>
           </tbody>
         </table>
         </div>
       </div>
     </div>
-
+ 
     <div class="right-col">
       <div class="panel" style="flex:1;">
-        <h2>תעדוף מיידי — 10 שירותים ללא ערוץ מקוון, לפי היקף שימוש</h2>
+        <h2>תעדוף מיידי — 8 שירותים ללא ערוץ מקוון, לפי היקף שימוש</h2>
         <ul class="priority-list">
           <li>
             <div class="priority-item-row">
@@ -503,31 +461,19 @@
             </div>
             <span class="usage num">150</span>
           </li>
-          <li>
-            <div class="priority-item-row">
-              <span class="rank">9</span>
-              <span class="name">סיוע חומרי/כלכלי<span class="dept">רווחה ושירותים חברתיים</span></span>
-            </div>
-            <span class="usage num">150</span>
-          </li>
-          <li>
-            <div class="priority-item-row">
-              <span class="rank">10</span>
-              <span class="name">שירות שניתן מתוקף חוק<span class="dept">רווחה ושירותים חברתיים</span></span>
-            </div>
-            <span class="usage num">130</span>
-          </li>
         </ul>
       </div>
     </div>
-
+ 
   </div>
-
+ 
   <footer>
     <span>מקור הנתונים: גיליון "מאוחד" — קטלוג שירותי הרשות לתושב · הופק על ידי יחידת BI, עיריית גני תקווה</span>
     <span class="num">06/08/2026</span>
   </footer>
-
+ 
 </div>
 </body>
 </html>
+ 
+
